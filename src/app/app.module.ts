@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { UIComponentComponent } from './component/ui-component/ui-component.component';
 import { CommonModule } from '@angular/common';
 import { ProductState } from '../store/states/product.state';
+import { CartState } from '../store/states/cart.state';
+import {  HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,14 @@ import { ProductState } from '../store/states/product.state';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    NgxsModule.forRoot([ProductState]), 
+    NgxsModule.forRoot([ProductState,CartState]), 
     NgxsReduxDevtoolsPluginModule.forRoot()
+    
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
+   
   ],
   bootstrap: [AppComponent]
 })

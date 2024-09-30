@@ -69,3 +69,15 @@ cursor: pointer;
   color: red;
   cursor: pointer;
 }
+.select{
+  display: flex;
+  justify-content: center;
+}
+select{
+  width: 80%;
+
+}
+option{
+  font-size: 25px;
+}
+
