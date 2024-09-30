@@ -9,11 +9,13 @@ import { CommonModule } from '@angular/common';
 import { ProductState } from '../store/states/product.state';
 import { CartState } from '../store/states/cart.state';
 import {  HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { ViewCartComponent } from './component/view-cart/view-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UIComponentComponent
+    UIComponentComponent,
+    ViewCartComponent
   ],
   imports: [
     BrowserModule,
