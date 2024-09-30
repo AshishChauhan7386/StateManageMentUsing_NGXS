@@ -1,0 +1,32 @@
+<h1 class="heading">Items</h1>
+<div class="card-parent">
+    @for (product of productData$ | async; track product.id) {
+    <div class="card-child">
+       
+        <div class="card-heading">
+        {{product.productName}}
+        </div>
+        <div class="card-img">
+            <img src={{product.productImg}}>
+        </div>
+        <div class="card-price">
+          {{product.Price | currency:'INR'}}
+        </div>
+
+        <div class="actions">
+            <div class="add-btn">
+                <span>+</span>
+            </div>
+           <div class="remove-btn">
+            <span>-</span>
+           </div>
+        </div>
+    </div>
+
+    }@empty{
+<div class="heading">Loading..</div>
+    }
+
+  
+
+</div>
