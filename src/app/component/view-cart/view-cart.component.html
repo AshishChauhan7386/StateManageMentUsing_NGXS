@@ -1,1 +1,21 @@
-<p>view-cart works!</p>
+<div class="heading">Bill Deatils</div>
+<div class="main">
+  <div class="view-cart-item">
+    <ol>
+      @for (item of cartProductData$ | async; track item.id ) {
+      <li>
+        Product Name- {{ item.productName }} || Price-
+        {{ item.price * item.quantity }} || Quantity- {{ item.quantity }}
+      </li>
+      }@empty {
+      <h1 class="empty-heading">No Bill Found</h1>
+
+      }
+    </ol>
+    <div class="total-price">
+      @if(totalpriceempty){Total Price -}
+    {{totalPrice | currency : 'INR'}}
+    </div>
+  </div>
+  <div class="view-bill"></div>
+</div>

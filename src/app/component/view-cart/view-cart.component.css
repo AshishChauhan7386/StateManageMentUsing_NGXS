@@ -1,0 +1,27 @@
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  color: red;
+  margin-top: 20px;
+}
+ol {
+  padding-left: 0px 20px;
+}
+li {
+  color: rgb(2, 2, 161);
+  font-weight: 800;
+  font-size: 25px;
+  margin-top: 10px;
+}
+.empty-heading {
+  text-align: center;
+
+  color: red;
+  margin-top: 20px;
+}
+.total-price {
+  color: rgb(2, 2, 161);
+  font-weight: 800;
+  font-size: 25px;
+  margin-top: 10px;
+}
